@@ -1,11 +1,11 @@
 meta {
-  name: withdraw
+  name: withdraw - debt pending
   type: http
-  seq: 31
+  seq: 36
 }
 
 post {
-  url: {{base_url}}/v2/withdraw
+  url: {{base_url}}/v2/withdraw/pending/debt
   body: json
   auth: inherit
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "sources": {
       "knotIds": [
-        "knot_01jv31mpq2enbsvmz9jneqkqxa"
+        "knot_01jv326h1genbsvnrpavhb9e2z"
       ],
       "threadIds": [
         // "thread_189fb9aecfb04fa88ff2ecf329c4ef96"
@@ -41,7 +41,7 @@ body:json {
       ]
     },
     "amount": {
-      "unitCount": 50000,
+      "unitCount": -50000,
       "unitType": "currency_micros",
       "unitToken": "USD"
     },

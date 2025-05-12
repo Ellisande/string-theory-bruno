@@ -1,0 +1,63 @@
+meta {
+  name: deposit - debt
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/v2/deposit/debt
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "deposits": [
+      {
+        "amount": {
+          "unitCount": -5000000000,
+          "unitToken": "USD",
+          "unitType": "currency_micros"
+        },
+        "tags": {
+          // "foo": "bar"
+        },
+        "groups": [
+          {
+            "type": "test_group_type_token",
+            "token": "a14d2e2e-230a-4271-a4f4-9b7253dbbce1"
+          }
+          //         ,
+          //         {
+          //           "id": "group_1kja93kajhsd0934a"
+          //         }
+        ]
+      }
+    ],
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "actionData": {
+      // "spicy": "peppers"
+    },
+    "commonTags": {
+      // "a": "b",
+      // "d": "e"
+    },
+    "commonGroups": [
+      // {
+      //     "type": "transfer",
+      //     "token": "two-phase"
+      // }
+    ],
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}
