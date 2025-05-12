@@ -20,5 +20,7 @@ If you have a String Theory running somewher you can configure Bruno to be able 
 4. Press the "+Create" button to create a new environment, and give it a meaningful name
 5. Click "+Add Variable" and add a new variable called `base_url`, the value should be the root URL of your String Theory API instance
 6. Click "+Add variable" and add a new varaible called `api_key`, click the box that says "secret", and finally paste in your String Theory API key for the environment you intend to hit
+7. Click "save" to save the changes for your environment
+8. Click "active" to use this as your active environment for requests
 
 You are new ready to use Bruno for your custom environment!
