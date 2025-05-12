@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "string_theory",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
