@@ -1,0 +1,21 @@
+meta {
+  name: group - search
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/v2/groups/search
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "term": "test_group_type_token",
+      "owner": {
+          "type": "test_owner",
+          "id": "test_money_owner"
+      }
+  }
+}
