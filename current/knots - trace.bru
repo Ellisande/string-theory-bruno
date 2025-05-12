@@ -1,0 +1,45 @@
+meta {
+  name: knots - trace
+  type: http
+  seq: 24
+}
+
+post {
+  url: {{base_url}}/v2/knots/trace
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv30hwbdenbsvkpe257nhp45"
+      ],
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_1234"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_1234"
+        //     }
+        // ]
+      ]
+    },
+    "filters": {
+      // "availability": "available",
+      // "holdStatus": "free",
+      // "current": "current"
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    }
+  }
+}

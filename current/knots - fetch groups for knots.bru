@@ -1,0 +1,46 @@
+meta {
+  name: knots - fetch groups for knots
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{base_url}}/v2/knots/groups
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv303qg4enbsvkdy0khxnrw8",
+        "knot_01jv304v6xenbsvkg72ry4mf3t"
+      ],
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_01jv304v6wenbsvkfm12rsegqh"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_01jv304v6wenbsvkfm12rsegqh"
+        //     }
+        // ]
+      ]
+    },
+    "filters": {
+      "availability": "available",
+      "holdStatus": "any",
+      "current": "current"
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+meta {
+  name: knots - fetch by sources
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{base_url}}/v2/knots
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv2zjqwqenbsvk3j5zd5m0ca"
+      ],
+      "threadIds": [],
+      "groupUnions": [
+        // {
+        //     "type": "transfer",
+        //     "token": "two-phase"
+        // }
+      ],
+      "groupIntersections": []
+    },
+    "filters": {
+      "availability": "any",
+      "current": "current",
+      "holdStatus": "any"
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    }
+  }
+}

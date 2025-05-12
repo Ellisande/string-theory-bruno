@@ -1,0 +1,74 @@
+meta {
+  name: knots - alter groups
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{base_url}}/v1/knots/groups/alter
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv303qg4enbsvkdy0khxnrw8",
+        "knot_01jv304v6xenbsvkg72ry4mf3t"
+      ],
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_1234"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_1234"
+        //     }
+        // ]
+      ]
+    },
+    "filters": {
+      // "availability": "available",
+      // "holdStatus": "free",
+    },
+    "groupsToAdd": [
+      {
+        "type": "test_group_to_add",
+        "token": "test"
+      }
+    ],
+    "groupsToRemove": [
+      // {
+      //     "type": "old",
+      //     "token": "group"
+      // },
+      {
+        "id": "group_01jv304v6wenbsvkfm12rsegqh"
+      }
+    ],
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "tags": {
+      // "sample": "tag"
+    },
+    "actionData": {
+      // "sample": "actionData"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}
