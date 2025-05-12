@@ -1,0 +1,70 @@
+meta {
+  name: loan - bulk
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/v1/loan/group/bulk
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "source": {
+      "groupIntersection": [
+        {
+          "id": "group_01jv2x0xt5enbsvjp8t930hzb5"
+        }
+      ],
+      "owner": {
+        "type": "test_owner",
+        "id": "test_money_owner"
+      }
+    },
+    "destination": {
+      "commonGroups": [],
+      "commonTag": {},
+      "owner": {
+        "type": "test_owner",
+        "id": "destination_owner"
+      }
+    },
+    "loans": [
+      {
+        "amount": {
+          "unitType": "currency_micros",
+          "unitToken": "USD",
+          "unitCount": 100
+        }
+      }
+      // ,
+      // {
+      //     "amount": {
+      //         "unitType": "currency_micros",
+      //         "unitToken": "USD",
+      //         "unitCount": 200
+      //     }
+      // },
+      // {
+      //     "amount": {
+      //         "unitType": "currency_micros",
+      //         "unitToken": "USD",
+      //         "unitCount": 300
+      //     }
+      // }
+    ],
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "actionData": {
+      // "sample": "actionData"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}
