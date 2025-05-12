@@ -1,0 +1,52 @@
+meta {
+  name: holds - alter tags
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{base_url}}/v1/holds/tags/alter
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "holds": [
+      //         {
+      //             "type": "fraud",
+      //             "token": "account_take_over"
+      //         },
+      {
+        "id": "hold_01jv2z1pexenbsvjv2ngea65mt"
+      }
+    ],
+    "tagsToUpdate": {
+      "key2": "value2"
+    },
+    "tagsToRemove": {
+      "key1": "value1"
+    },
+    "groupsToAdd": [
+      // {
+      //     "type": "group1",
+      //     "token": "test1"
+      // }
+    ],
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "actionData": {
+      // "spicy": "peppers"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+meta {
+  name: holds - create
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{base_url}}/v1/hold/create
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "type": "test_fraud",
+    "token": "123",
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: holds - fetch by ids
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{base_url}}/v2/holds
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ids": [
+      "hold_01jv2z62f7enbsvjygch2cqye8"
+    ],
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    }
+  }
+}
