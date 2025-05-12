@@ -1,0 +1,73 @@
+meta {
+  name: withdraw - confirm
+  type: http
+  seq: 33
+}
+
+post {
+  url: {{base_url}}/v2/withdraw/confirm
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv31x2aqenbsvnc85gkj3tzx"
+      ],
+      "threadIds": [
+        // "thread_189fb9aecfb04fa88ff2ecf329c4ef96"
+      ],
+      "groupUnions": [
+        // {
+        //     "type": "crazy",
+        //     "token": "rich"
+        // },
+        // {
+        //     "id": "group_01hq1p0g2qf05tws1p21cswwea"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "type": "crazy",
+        //         "token": "rich"
+        //     },
+        //     {
+        //         "id": "group_a69ee61425bf423cbb5647330b71c9f9"
+        //     }
+        // ]
+      ]
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "groupsToAdd": [
+      // {
+      //     "type": "withdraw",
+      //     "token": "{{$guid}}"
+      // },
+      // {
+      //     "type": "withdraw2",
+      //     "token": "{{$guid}}"
+      // }
+    ],
+    "tags": {
+      // "a": "b",
+      // "d": "e"
+    },
+    "actionData": {
+      // "spicy": "peppers"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}
