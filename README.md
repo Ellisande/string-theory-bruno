@@ -23,4 +23,4 @@ If you have a String Theory running somewhere you can configure Bruno to be able
 7. Click "save" to save the changes for your environment
 8. Click "active" to use this as your active environment for requests
 
-You are new ready to use Bruno for your custom environment!
+You are now ready to use Bruno for your custom environment!
