@@ -12,7 +12,7 @@ You are now ready to hit a local instance of String Theory with Bruno
 
 ### Executing requests against other environments
 
-If you have a String Theory running somewher you can configure Bruno to be able to hit it using the following steps:
+If you have a String Theory running somewhere you can configure Bruno to be able to hit it using the following steps:
 
 1. Click on a collection
 2. In the top right corner there is a drop down that will say "local" or "No Environment"
