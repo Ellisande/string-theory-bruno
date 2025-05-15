@@ -1,0 +1,60 @@
+meta {
+  name: return - cancel
+  type: http
+  seq: 34
+}
+
+post {
+  url: {{base_url}}/v2/return/cancel
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv32jjm3enbsvpgfkjavyzfc"
+      ],
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_1234"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_1234"
+        //     }
+        // ]
+      ]
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "tags": {
+      // "sample": "tag"
+    },
+    "groupsToAdd": [
+      // {
+      //     "type": "allocate",
+      //     "token": "{{$guid}}"
+      // }
+    ],
+    "actionData": {
+      // "sample": "actionData"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}

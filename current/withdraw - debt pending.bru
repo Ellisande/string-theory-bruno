@@ -1,0 +1,78 @@
+meta {
+  name: withdraw - debt pending
+  type: http
+  seq: 43
+}
+
+post {
+  url: {{base_url}}/v2/withdraw/pending/debt
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv326h1genbsvnrpavhb9e2z"
+      ],
+      "threadIds": [
+        // "thread_189fb9aecfb04fa88ff2ecf329c4ef96"
+      ],
+      "groupUnions": [
+        // {
+        //     "type": "crazy",
+        //     "token": "rich"
+        // },
+        // {
+        //     "id": "group_01hq1p0g2qf05tws1p21cswwea"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "type": "crazy",
+        //         "token": "rich"
+        //     },
+        //     {
+        //         "id": "group_a69ee61425bf423cbb5647330b71c9f9"
+        //     }
+        // ]
+      ]
+    },
+    "amount": {
+      "unitCount": -50000,
+      "unitType": "currency_micros",
+      "unitToken": "USD"
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "groupsToAdd": [
+      // {
+      //     "type": "withdraw",
+      //     "token": "{{$guid}}"
+      // },
+      // {
+      //     "type": "withdraw2",
+      //     "token": "{{$guid}}"
+      // }
+    ],
+    "tags": {
+      // "a": "b",
+      // "d": "e"
+    },
+    "actionData": {
+      // "spicy": "peppers"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}

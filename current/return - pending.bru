@@ -1,0 +1,65 @@
+meta {
+  name: return - pending
+  type: http
+  seq: 32
+}
+
+post {
+  url: {{base_url}}/v2/return/pending
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv32jbv8enbsvpcwcte47b4z"
+      ],
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_1234"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_1234"
+        //     }
+        // ]
+      ]
+    },
+    "amount": {
+      "unitType": "currency_micros",
+      "unitToken": "USD",
+      "unitCount": 200
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "tags": {
+      // "sample": "tag"
+    },
+    "groupsToAdd": [
+      // {
+      //     "type": "allocate",
+      //     "token": "{{$guid}}"
+      // }
+    ],
+    "actionData": {
+      // "sample": "actionData"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}

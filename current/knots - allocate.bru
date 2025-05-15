@@ -1,0 +1,79 @@
+meta {
+  name: knots - allocate
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{base_url}}/v2/knots/allocate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv2zjqwqenbsvk3j5zd5m0ca"
+      ],
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_1234"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_1234"
+        //     }
+        // ]
+      ]
+    },
+    "filters": {
+      // "availability": "available",
+      // "holdStatus": "free",
+    },
+    "requestedAmount": {
+      "unitType": "currency_micros",
+      "unitToken": "USD",
+      "unitCount": 20000000
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    // "strategy": "smallest-largest",
+    "tags": {
+      // "sample": "tag"
+    },
+    "actionData": {
+      // "sample": "actionData"
+    },
+    "groupsToAdd": [
+      // {
+      //     "type": "allocate",
+      //     "token": "{{$guid}}"
+      // }
+    ],
+    "groupsToRemove": [
+      // {
+      //     "type": "old",
+      //     "token": "group"
+      // },
+      // {
+      //     "id": "group_1234"
+      // }
+    ],
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}

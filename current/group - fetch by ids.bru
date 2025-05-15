@@ -1,0 +1,23 @@
+meta {
+  name: group - fetch by ids
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/v2/groups
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ids": [
+      "group_01jv2wxznhenbsvjh29zmjm9yq"
+    ]
+    // "owner": {
+    //     "type": "clerk_user",
+    //     "id": "user_2TDW6OsSPyju6AXgWJn8CtbzhoL"
+    // }
+  }
+}

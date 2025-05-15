@@ -1,0 +1,59 @@
+meta {
+  name: repay - from groups
+  type: http
+  seq: 29
+}
+
+post {
+  url: {{base_url}}/v2/repay/group
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "source": {
+      "positiveKnotIntersection": [
+        {
+          "id": "group_01jv315k93enbsvmbc93hs5ms0"
+        }
+      ],
+      "debtKnotIntersection": [
+        {
+          "id": "group_01jv315k93enbsvmbc93hs5ms0"
+        }
+      ],
+      "owner": {
+        "type": "test_owner",
+        "id": "test_money_owner"
+      }
+    },
+    "destination": {
+      "owner": {
+        "type": "test_owner",
+        "id": "destination_owner"
+      },
+      "tags": {
+        // "sample": "tag"
+      },
+      "groupsToAdd": [
+        // {
+        //     "type": "allocate",
+        //     "token": "{{$guid}}"
+        // }
+      ]
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    // "repaymentStrategy": "exact",
+    "actionData": {
+      // "sample": "actionData"
+    },
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}

@@ -1,11 +1,11 @@
 meta {
-  name: deposit
+  name: deposit - debt
   type: http
-  seq: 1
+  seq: 6
 }
 
 post {
-  url: {{base_url}}/v2/deposit
+  url: {{base_url}}/v2/deposit/debt
   body: json
   auth: inherit
 }
@@ -15,7 +15,7 @@ body:json {
     "deposits": [
       {
         "amount": {
-          "unitCount": 5000000000,
+          "unitCount": -5000000000,
           "unitToken": "USD",
           "unitType": "currency_micros"
         },

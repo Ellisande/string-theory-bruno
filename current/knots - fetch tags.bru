@@ -1,0 +1,45 @@
+meta {
+  name: knots - fetch tags
+  type: http
+  seq: 23
+}
+
+post {
+  url: {{base_url}}/v2/knots/tags
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": [
+        "knot_01jv30hwbdenbsvkpe257nhp45"
+      ],
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_1234"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_1234"
+        //     }
+        // ]
+      ]
+    },
+    "filters": {
+      // "availability": "available",
+      // "holdStatus": "free",
+      // "current": "current"
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    }
+  }
+}
