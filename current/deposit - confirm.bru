@@ -12,51 +12,51 @@ post {
 
 body:json {
   {
-      "sources": {
-          "knotIds": [
-              "knot_01jv2wtc9eenbsvjb5xwmgge6s",
-              "knot_01jv2wtmcqenbsvjd7m9hr19dc"
-          ],
-          "threadIds": [
-              // "thread_1234"
-          ],
-          "groupUnions": [
-              // {
-              //     "id": "group_1234"
-              // }
-          ],
-          "groupIntersections": [
-              // [
-              //     {
-              //         "id": "group_1234"
-              //     }
-              // ]
-          ]
-      },
-      "owner": {
-          "type": "test_owner",
-          "id": "test_money_owner"
-      },
-      "actor": {
-          "type": "test_owner",
-          "id": "bruno_api_test"
-      },
-      "actionData": {
-          // "spicy": "peppers"
-      },
-      "tags": {
-          // "a": "b",
-          // "d": "e"
-      },
-      "groupsToAdd": [
-          // {
-          //     "type": "transfer",
-          //     "token": "two-phase"
-          // }
+    "sources": {
+      "knotIds": [
+        "knot_01jv2wtc9eenbsvjb5xwmgge6s",
+        "knot_01jv2wtmcqenbsvjd7m9hr19dc"
       ],
-      "idempotencyKey": {
-          "type": "test",
-          "token": "{{$guid}}"
-      }
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_1234"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_1234"
+        //     }
+        // ]
+      ]
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_owner",
+      "id": "bruno_api_test"
+    },
+    "actionData": {
+      // "spicy": "peppers"
+    },
+    "tags": {
+      // "a": "b",
+      // "d": "e"
+    },
+    "groupsToAdd": [
+      // {
+      //     "type": "transfer",
+      //     "token": "two-phase"
+      // }
+    ],
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
   }
 }

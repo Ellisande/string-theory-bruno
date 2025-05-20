@@ -12,51 +12,51 @@ post {
 
 body:json {
   {
-      "sources": {
-          "knotIds": [
-              "knot_01jv2wkp5wenbsvj2hfk1h7e9g",
-              "knot_01jv2wkydtenbsvj4g57qzyx03"
-          ],
-          "threadIds": [
-              // "thread_1234"
-          ],
-          "groupUnions": [
-              // {
-              //     "id": "group_1234"
-              // }
-          ],
-          "groupIntersections": [
-              // [
-              //     {
-              //         "id": "group_1234"
-              //     }
-              // ]
-          ]
-      },
-      "owner": {
-          "type": "test_owner",
-          "id": "test_money_owner"
-      },
-      "actor": {
-          "type": "test_user",
-          "id": "bruno_api_test"
-      },
-      "actionData": {
-          // "test_action_data": "one_time_information"
-      },
-      "tags": {
-          // "test_tag_1": "foo",
-          // "test_tag_2": "bar"
-      },
-      "groupsToAdd": [
-          // {
-          //     "type": "transfer",
-          //     "token": "two-phase"
-          // }
+    "sources": {
+      "knotIds": [
+        "knot_01jv2wkp5wenbsvj2hfk1h7e9g",
+        "knot_01jv2wkydtenbsvj4g57qzyx03"
       ],
-      "idempotencyKey": {
-          "type": "test",
-          "token": "{{$guid}}"
-      }
+      "threadIds": [
+        // "thread_1234"
+      ],
+      "groupUnions": [
+        // {
+        //     "id": "group_1234"
+        // }
+      ],
+      "groupIntersections": [
+        // [
+        //     {
+        //         "id": "group_1234"
+        //     }
+        // ]
+      ]
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "actionData": {
+      // "test_action_data": "one_time_information"
+    },
+    "tags": {
+      // "test_tag_1": "foo",
+      // "test_tag_2": "bar"
+    },
+    "groupsToAdd": [
+      // {
+      //     "type": "transfer",
+      //     "token": "two-phase"
+      // }
+    ],
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
   }
 }

@@ -12,49 +12,49 @@ post {
 
 body:json {
   {
-      "deposits": [
-          {
-              "amount": {
-                  "unitCount": 5000000000,
-                  "unitToken": "USD",
-                  "unitType": "currency_micros"
-              },
-              "tags": {
-                  // "a": "b",
-                  // "d": "e"
-              },
-              "groups": [
-                  // {
-                  //     "type": "transfer",
-                  //     "token": "two-phase"
-                  // }
-              ]
-          }
-      ],
-      "owner": {
-          "type": "test_owner",
-          "id": "test_money_owner"
-      },
-      "actor": {
-          "type": "test_user",
-          "id": "bruno_api_test"
-      },
-      "actionData": {
-          // "spicy": "peppers"
-      },
-      "commonTags": {
+    "deposits": [
+      {
+        "amount": {
+          "unitCount": 5000000000,
+          "unitToken": "USD",
+          "unitType": "currency_micros"
+        },
+        "tags": {
           // "a": "b",
           // "d": "e"
-      },
-      "commonGroups": [
+        },
+        "groups": [
           // {
           //     "type": "transfer",
           //     "token": "two-phase"
           // }
-      ],
-      "idempotencyKey": {
-          "type": "test",
-          "token": "{{$guid}}"
+        ]
       }
+    ],
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "actionData": {
+      // "spicy": "peppers"
+    },
+    "commonTags": {
+      // "a": "b",
+      // "d": "e"
+    },
+    "commonGroups": [
+      // {
+      //     "type": "transfer",
+      //     "token": "two-phase"
+      // }
+    ],
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
   }
 }
