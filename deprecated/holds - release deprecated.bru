@@ -1,11 +1,11 @@
 meta {
-  name: holds - release
+  name: holds - release deprecated
   type: http
-  seq: 10
+  seq: 2
 }
 
 post {
-  url: {{base_url}}/v3/holds/release
+  url: {{base_url}}/v2/hold/release
   body: json
   auth: inherit
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "sources": {
       "knotIds": [
-        "knot_01jx38etz7eh1bbkrq2d1bw040"
+        "knot_01jv2z1j4eenbsvjt3msr70bd3"
       ],
       "threadIds": [
         // "thread_189fb9aecfb04fa88ff2ecf329c4ef96"
@@ -45,7 +45,7 @@ body:json {
       "id": "test_money_owner"
     },
     "holdIds": [
-      "hold_01jx38ffvxeh1bbksmx04dc45n"
+      "hold_01jv2z1pexenbsvjv2ngea65mt"
     ],
     "actor": {
       "type": "test_user",

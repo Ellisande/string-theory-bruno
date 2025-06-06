@@ -1,11 +1,11 @@
 meta {
-  name: knots - alter tags
+  name: knots - alter groups deprecated
   type: http
-  seq: 24
+  seq: 44
 }
 
 post {
-  url: {{base_url}}/v2/knots/tags/alter
+  url: {{base_url}}/v1/knots/groups/alter
   body: json
   auth: inherit
 }
@@ -14,7 +14,8 @@ body:json {
   {
     "sources": {
       "knotIds": [
-        "knot_01jv30hwbdenbsvknm3bncck64"
+        "knot_01jv303qg4enbsvkdy0khxnrw8",
+        "knot_01jv304v6xenbsvkg72ry4mf3t"
       ],
       "threadIds": [
         // "thread_1234"
@@ -35,19 +36,21 @@ body:json {
     "filters": {
       // "availability": "available",
       // "holdStatus": "free",
-      // "current": "current"
-    },
-    "tagsToUpdate": {
-      "key1": "value1"
-    },
-    "tagsToRemove": {
-      //         "key2": "value2"
     },
     "groupsToAdd": [
+      {
+        "type": "test_group_to_add",
+        "token": "test"
+      }
+    ],
+    "groupsToRemove": [
       // {
-      //     "type": "group1",
-      //     "token": "test1"
-      // }
+      //     "type": "old",
+      //     "token": "group"
+      // },
+      {
+        "id": "group_01jv304v6wenbsvkfm12rsegqh"
+      }
     ],
     "owner": {
       "type": "test_owner",
@@ -57,8 +60,11 @@ body:json {
       "type": "test_user",
       "id": "bruno_api_test"
     },
+    "tags": {
+      // "sample": "tag"
+    },
     "actionData": {
-      // "spicy": "peppers"
+      // "sample": "actionData"
     },
     "idempotencyKey": {
       "type": "test",
