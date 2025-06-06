@@ -1,11 +1,11 @@
 meta {
-  name: holds - create
+  name: holds - create deprecated
   type: http
-  seq: 11
+  seq: 3
 }
 
 post {
-  url: {{base_url}}/v2/hold/create
+  url: {{base_url}}/v1/hold/create
   body: json
   auth: inherit
 }

@@ -1,11 +1,11 @@
 meta {
-  name: holds - add
+  name: holds - add deprecated
   type: http
-  seq: 9
+  seq: 1
 }
 
 post {
-  url: {{base_url}}/v3/holds/add
+  url: {{base_url}}/v2/hold/add
   body: json
   auth: inherit
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "sources": {
       "knotIds": [
-        "knot_01jx38etz7eh1bbkrq2d1bw040"
+        "knot_01jv2z1pexenbsvjvkbqfcqt8r"
       ],
       "threadIds": [
         // "thread_189fb9aecfb04fa88ff2ecf329c4ef96"
