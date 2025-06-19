@@ -1,11 +1,11 @@
 meta {
-  name: exchange
+  name: exchange quote
   type: http
   seq: 3
 }
 
 post {
-  url: {{base_url}}/v1/exchange
+  url: {{base_url}}/v1/exchange/quote
   body: json
   auth: inherit
 }
@@ -13,7 +13,7 @@ post {
 body:json {
   {
     "sources": {
-      "knotIds": ["knot_01jxk15atmexxtjq69q1tygcr4"]
+      "knotIds": ["knot_01jy4r8xa6e8n86t3zxfe0fzvv"]
     },
     "filters": {},
     "from": {
@@ -37,15 +37,6 @@ body:json {
       "type": "test_user",
       "id": "bruno_api_test"
     },
-    "actionData": {
-      // "sample": "actionData"
-    },
-    "groupsToAdd": [],
-    "tags": {},
-    "strategy": "random",
-    "idempotencyKey": {
-      "type": "test",
-      "token": "{{$guid}}"
-    }
+    "strategy": "random"
   }
 }
