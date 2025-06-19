@@ -1,0 +1,51 @@
+meta {
+  name: exchange
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/v1/knots/exchange
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sources": {
+      "knotIds": ["knot_01jxk15atmexxtjq69q1tygcr4"]
+    },
+    "filters": {},
+    "from": {
+      "unitType": "currency_micros",
+      "unitToken": "USD",
+      "unitCount": 100
+    },
+    "to": {
+      "unitType": "currency_micros",
+      "unitToken": "EUR"
+    },
+    "exchangeRateKey": {
+      "type": "mock",
+      "token": "bf7aefcc-a10f-4448-8759-bb3f13b3cd90"
+    },
+    "owner": {
+      "type": "test_owner",
+      "id": "test_money_owner"
+    },
+    "actor": {
+      "type": "test_user",
+      "id": "bruno_api_test"
+    },
+    "actionData": {
+      // "sample": "actionData"
+    },
+    "groupsToAdd": [],
+    "tags": {},
+    "strategy": "random",
+    "idempotencyKey": {
+      "type": "test",
+      "token": "{{$guid}}"
+    }
+  }
+}
